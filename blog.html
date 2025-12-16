@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Geovana Resende</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <section class="container header-inner">
+        <a href="index.html#home" class="logo">
+            <img src="https://img.icons8.com/?size=100&id=2802&format=png&color=12B886" alt="logo">
+            <span class="logo-text">Geovana Resende</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#sobre">Sobre</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#agendamento">Agendamento</a>
+            <a href="blog.html" class="nav-ativo">Blog</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+
+        <button class="menu-btn" id="btnMobile" aria-label="Abrir menu">
+            ☰
+        </button>
+    </section>
+
+    <nav class="menu-mobile" id="menuMobile">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#agendamento">Agendamento</a>
+        <a href="blog.html" class="nav-ativo">Blog</a>
+        <a href="index.html#contato">Contato</a>
+    </nav>
+</header>
+
+<main class="pagina-interna-wrapper">
+    <section class="secao">
+        <div class="container pagina-interna">
+
+            <h1 class="secao-titulo">Blog da Geovana</h1>
+            <p class="secao-texto">
+                Em breve você encontrará aqui textos sobre neuropsicologia, desenvolvimento e saúde mental.
+            </p>
+
+            <div class="blog-empty">
+                Ainda não há nada por aqui — aguardando ideias. 🌱
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer id="contato" class="footer">
+    <section class="container footer-inner">
+
+        <div class="footer-info">
+            <h2>Contato</h2>
+            <p>Se você sente que é hora de cuidar de você (ou do seu filho), estou à disposição para conversarmos
+                com calma sobre o que você está precisando neste momento.</p>
+
+            <ul class="footer-contatos">
+                <li><strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/psi.geovanaresende" target="_blank">@psi.geovanaresende</a>
+                </li>
+                <li><strong>Email:</strong> seuemail@gmail.com</li>
+                <li><strong>WhatsApp:</strong> (11) 97415-3048</li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <p class="footer-social-titulo">Redes</p>
+            <div class="footer-social-icons">
+                <a href="https://www.instagram.com/psi.geovanaresende" target="_blank" aria-label="Instagram"
+                   class="social-circle">
+                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png" alt="Instagram">
+                </a>
+                <a href="mailto:seuemail@gmail.com" aria-label="E-mail" class="social-circle">
+                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/new-post.png" alt="E-mail">
+                </a>
+                <a href="https://wa.me/5511974153048" target="_blank" aria-label="WhatsApp" class="social-circle">
+                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/whatsapp.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="footer-copy">
+        © 2025 Geovana Resende — Psicologia & Neuropsicologia
+    </div>
+</footer>
+
+<script>
+    const btnMobile = document.getElementById("btnMobile");
+    const menuMobile = document.getElementById("menuMobile");
+
+    if (btnMobile && menuMobile) {
+        btnMobile.addEventListener("click", () => {
+            const aberto = menuMobile.classList.toggle("menu-mobile-aberto");
+            btnMobile.setAttribute("aria-expanded", aberto ? "true" : "false");
+        });
+
+        menuMobile.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menuMobile.classList.remove("menu-mobile-aberto");
+                btnMobile.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
